@@ -31,7 +31,7 @@ Kode tidak berisi nama atau tanggal lahir anak sebenarnya. Jangan mengunggah Exc
 
 Referensi resmi: [Google OAuth](https://supabase.com/docs/guides/auth/social-login/auth-google), [passkeys](https://supabase.com/docs/guides/auth/passkeys).
 
-Untuk konfigurasi bawaan, edit `config.js`. URL dan publishable key memang tersedia bagi frontend; izin data ditentukan database. Aplikasi tidak membuat/mengonfigurasi proyek Supabase Anda otomatis.
+Konfigurasi proyek Tumbuh sudah disertakan dalam `config.js`. Browser/perangkat baru otomatis memakai Supabase tersebut dan membuka login Google; formulir koneksi tidak perlu diisi lagi. Mode percobaan tetap tersedia melalui pilihan eksplisit. Untuk mengganti konfigurasi bawaan di semua perangkat, edit `config.js`. URL dan publishable key memang tersedia bagi frontend; izin data ditentukan database. Aplikasi tidak membuat/mengonfigurasi proyek Supabase Anda otomatis.
 
 ## Pemakaian keamanan akun
 
@@ -41,7 +41,7 @@ Untuk konfigurasi bawaan, edit `config.js`. URL dan publishable key memang terse
 - Ubah PIN membutuhkan PIN saat ini. Lupa PIN? masuk ulang Google lalu tentukan PIN baru. Google harus baru diverifikasi (AMR OAuth maksimum lima menit); refresh token tidak dihitung sebagai login ulang. Reset/ubah PIN membatalkan izin buka semua sesi akun.
 - RLS membatasi pembacaan/penulisan profil dan penilaian sampai sesi punya izin buka yang belum kedaluwarsa. Passkey membuka sesi hanya dengan AMR `passkey` yang baru diverifikasi Supabase (maksimum dua menit), bukan boolean dari browser.
 - Kunci otomatis membuang formulir belum tersimpan. Simpan draf secara berkala. PIN ini lapisan penguncian aplikasi; bukan pengganti MFA tingkat akun Google/Supabase.
-- Keluar menghapus sesi Supabase dari browser. Admin mencabut akses dengan menghapus membership `tumbuh_staff`.
+- Tombol Logout tersedia di sidebar. Klik email akun untuk membuka pilihan Logout; pada HP menu akun tampil di bagian atas. Label Admin/Caregiver mengikuti role dari database. Keluar menghapus sesi Supabase dari browser. Admin mencabut akses dengan menghapus membership `tumbuh_staff`.
 
 ## Memasang sebagai PWA
 

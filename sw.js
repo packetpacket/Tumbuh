@@ -1,4 +1,4 @@
-const CACHE='tumbuh-shell-v4';
+const CACHE='tumbuh-shell-v6';
 const ASSETS=['./','./index.html','./style.css','./app.js','./core.mjs','./importer.mjs','./security.mjs','./pwa.mjs','./config.js','./indicators.json','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./vendor/exceljs.min.js','./vendor/xlsx.full.min.js','./vendor/supabase.min.js'];
 const urls=new Set(ASSETS.map(path=>new URL(path,self.registration.scope).href));
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
