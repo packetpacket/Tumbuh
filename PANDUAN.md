@@ -4,6 +4,8 @@ Aplikasi web statis untuk profil anak, pengamatan bulanan, riwayat, cadangan JSO
 
 ## Mencoba
 
+Halaman awal menampilkan alur Google → PIN/passkey dan tombol Pasang aplikasi. Mode percobaan tidak dibuka otomatis; pilih Coba mode percobaan secara sengaja. Pilihan percobaan berlaku selama tab/sesi browser berjalan.
+
 Gunakan tautan pratinjau atau jalankan server HTTP di folder `dist`. Membuka index.html melalui file:// tidak didukung karena aplikasi mengambil indikator melalui fetch.
 
 Mode percobaan berisi tiga profil fiktif. Penyimpanannya hanya di browser/perangkat yang sama. Untuk data sebenarnya, gunakan tombol Impor Excel dan pilih `Data_Anak_OKT_Urutan_Usia(1).xlsx`. File perkembangan dengan satu sheet per anak juga didukung: identitas di bagian atas setiap sheet dibaca otomatis. Impor pertama mengganti profil contoh beserta catatan percobaannya setelah konfirmasi. File sumber `DATA ANAK 2026.xlsx` juga didukung: aplikasi mengambil sheet OKT dan berhenti sebelum bagian OUT. Impor memvalidasi seluruh data sebelum menyimpan; baris invalid membatalkan impor. Nama dan tanggal lahir yang sama memperbarui profil tanpa menggandakan data. Tanggal Excel dibaca tanpa menggeser tanggal akibat zona waktu. Template indikator kosong tanpa identitas anak tidak dapat digunakan sebagai daftar anak.
